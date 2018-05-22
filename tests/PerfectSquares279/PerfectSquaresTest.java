@@ -34,4 +34,30 @@ public class PerfectSquaresTest {
         assertEquals(PerfectSquares.perfectSquares(12), 3);
         assertEquals(PerfectSquares.perfectSquares(18), 2);
     }
+
+    @Test
+    public void TestOnlyOnesMem() {
+        assertEquals(PerfectSquares.perfectSquaresMem(1), 1);
+        assertEquals(PerfectSquares.perfectSquaresMem(2), 2);
+        assertEquals(PerfectSquares.perfectSquaresMem(3), 3);
+    }
+
+    @Test
+    public void TestPerfectSquaresMem(){
+        assertEquals(PerfectSquares.perfectSquaresMem(4), 1);
+        assertEquals(PerfectSquares.perfectSquaresMem(9), 1);
+        assertEquals(PerfectSquares.perfectSquaresMem(16), 1);
+    }
+
+    @Test
+    public void TestLargestSquaresSmallestSequenceMem(){
+        assertEquals(PerfectSquares.perfectSquaresMem(10), 2);
+        assertEquals(PerfectSquares.perfectSquaresMem(13), 2);
+    }
+
+    @Test
+    public void TestNotLargestSquaresSmallestSequenceMem(){
+        assertEquals(PerfectSquares.perfectSquaresMem(12), 3);
+        assertEquals(PerfectSquares.perfectSquaresMem(18), 2);
+    }
 }
