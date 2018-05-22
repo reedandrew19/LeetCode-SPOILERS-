@@ -34,4 +34,30 @@ public class PerfectSquaresTest {
         assertEquals(PerfectSquares.perfectSquares(12), 3);
         assertEquals(PerfectSquares.perfectSquares(18), 2);
     }
+
+    @Test
+    public void TestBetterOnlyOnes(){
+        assertEquals(1, PerfectSquares.betterPerfectSquaresTab(1));
+        assertEquals(2, PerfectSquares.betterPerfectSquaresTab(2));
+        assertEquals(3, PerfectSquares.betterPerfectSquaresTab(3));
+    }
+
+    @Test
+    public void TestBetterPerfectSquares(){
+        assertEquals(1, PerfectSquares.betterPerfectSquaresTab(4));
+        assertEquals(1, PerfectSquares.betterPerfectSquaresTab(9));
+        assertEquals(1, PerfectSquares.betterPerfectSquaresTab(16));
+    }
+
+    @Test
+    public void TestBetterLargestSquaresSmallestSequence(){
+        assertEquals(2, PerfectSquares.betterPerfectSquaresTab(10));
+        assertEquals(2, PerfectSquares.betterPerfectSquaresTab(13));
+    }
+
+    @Test
+    public void TestBetterNotLargestSquaresSmallestSequence(){
+        assertEquals(3, PerfectSquares.betterPerfectSquaresTab(12));
+        assertEquals(2, PerfectSquares.betterPerfectSquaresTab(18));
+    }
 }

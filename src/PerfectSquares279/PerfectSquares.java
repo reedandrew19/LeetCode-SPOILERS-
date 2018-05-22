@@ -1,5 +1,7 @@
 package PerfectSquares279;
 
+import java.util.Arrays;
+
 /**
  * Given a positive integer n, find the least number of perfect square numbers
  * (for example, 1, 4, 9, 16, ...) which sum to n.
@@ -29,6 +31,26 @@ public class PerfectSquares {
         return intsInSequence[N - 1];
     }
 
+    public static int betterPerfectSquaresTab(int n){
+        int min;
+        int[] perfectSquares = new int[n + 1];
+
+        Arrays.fill(perfectSquares, Integer.MAX_VALUE);
+        perfectSquares[0] = 0;
+
+        for(int i = 1; i < perfectSquares.length; i++){
+            min = Integer.MAX_VALUE;
+
+            for(int j = 1; i - j * j >= 0; j++){
+                min = Math.min(min, perfectSquares[i - j * j] + 1);
+            }
+
+            perfectSquares[i] = min;
+        }
+
+        return perfectSquares[n];
+    }
+
     public static int perfectSquaresFunctional(int N){
         return 0;
     }
@@ -56,4 +78,11 @@ public class PerfectSquares {
  * It wasn't until after the interview that I considered: "perhaps it's
  * possible to use streams to make tabulation functional..." I will be
  * exploring this possibility in the days to come.
+ *
+ * Post Submission: submission accepted! woo!! But alas. After telling my recruiter I found the fastest answer after he
+ * asked what I thought about the interview.... what a blunder that was. The more I do these practice problems the more
+ * I'm coming to realize these problems usually have a constant time sollution.... CURSE YOU LARANGE'S FOUR SQUARE
+ * THEOREM!!!
+ *
+ * ...Nah but it's a cool theorem.
  */
