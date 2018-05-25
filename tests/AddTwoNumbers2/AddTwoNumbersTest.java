@@ -14,9 +14,8 @@ public class AddTwoNumbersTest {
     public void TestBothOneDigit(){
         ListNode list1 = new ListNode(2);
         ListNode list2 = new ListNode(6);
-        ListNode result = new ListNode(8);
 
-        assertEquals(result.toString(), AddTwoNumbers.addTwoNumbers(list1,
-                list2).toString());
+        assertEquals(("(8)"), AddTwoNumbers.addTwoNumbers(list1,
+                list2).getListString());
     }
 }
