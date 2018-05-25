@@ -11,7 +11,7 @@ import java.util.Stack;
  *
  * Created by Andrew on 5/22/2018.
  */
-public class TwoSum1 {
+public class TwoSum {
     public static int[] TwoSum(int[] nums, int target){
         HashMap<Integer, Stack<Integer>> valToIdx = new HashMap<>();
         int forwardCurs = 0;
