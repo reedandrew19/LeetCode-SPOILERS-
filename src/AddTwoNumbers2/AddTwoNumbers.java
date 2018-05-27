@@ -1,7 +1,6 @@
 package AddTwoNumbers2;
 
 import ClassImplementations.ListNode;
-
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -19,14 +18,9 @@ public class AddTwoNumbers {
         int carry = 0;
 
         while(l1 != null && l2 != null){
-            cursor.val = l1.val + l2.val + carry;
+            cursor.val = (l1.val + l2.val + carry) % 10;
 
-            if(cursor.val > 9){
-                cursor.val -= 10;
-                carry = 1;
-            }else{
-                carry = 0;
-            }
+            carry = (l1.val + l2.val + carry) / 10;
 
             l1= l1.next;
             l2 = l2.next;
@@ -37,9 +31,11 @@ public class AddTwoNumbers {
             }
         }
 
-        if(l1 == null){
+        if(l2 != null){
             while(l2 != null){
-                cursor.val = l2.val;
+                cursor.val = (l2.val + carry) % 10;
+                carry = (l2.val + carry) / 10;
+
                 l2 = l2.next;
 
                 if (l2 != null) {
@@ -49,9 +45,11 @@ public class AddTwoNumbers {
             }
         }
 
-        if(l2 == null){
+        if(l1 != null){
             while(l1 != null){
-                cursor.val = l1.val;
+                cursor.val = (l1.val + carry) % 10;
+                carry = (l1.val + carry) / 10;
+
                 l1 = l1.next;
 
                 if (l1 != null) {
@@ -59,6 +57,10 @@ public class AddTwoNumbers {
                     cursor = cursor.next;
                 }
             }
+        }
+
+        if(carry > 0){
+            cursor.next = new ListNode(carry);
         }
 
         return returnList;

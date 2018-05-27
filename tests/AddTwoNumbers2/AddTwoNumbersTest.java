@@ -52,4 +52,40 @@ public class AddTwoNumbersTest {
         assertEquals("(8,1)", AddTwoNumbers.addTwoNumbers(list1, list2)
                 .getListString());
     }
+
+    @Test
+    public void TestCarryNoOverflow(){
+        ListNode list1 = new ListNode(8);
+        list1.next = new ListNode(4);
+
+        ListNode list2 = new ListNode(7);
+        list2.next = new ListNode(3);
+
+        assertEquals("(5,8)", AddTwoNumbers.addTwoNumbers(list1, list2)
+                .getListString());
+    }
+
+    @Test
+    public void TestCarryOneListBigger(){
+        ListNode list1 = new ListNode(8);
+        list1.next = new ListNode(4);
+
+        ListNode list2 = new ListNode(7);
+
+        assertEquals("(5,5)", AddTwoNumbers.addTwoNumbers(list1, list2)
+                .getListString());
+        assertEquals("(5,5)", AddTwoNumbers.addTwoNumbers(list2, list1)
+                .getListString());
+    }
+
+    @Test
+    public void TestDoubleCarry(){
+        ListNode list1 = new ListNode(9);
+        list1.next = new ListNode(9);
+
+        ListNode list2 = new ListNode(1);
+
+        assertEquals("(0,0,1)", AddTwoNumbers.addTwoNumbers(list1, list2)
+                .getListString());
+    }
 }
