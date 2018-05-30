@@ -31,6 +31,37 @@ public class PerfectSquares {
         return intsInSequence[N - 1];
     }
 
+    public static int perfectSquaresMem(int N){
+        int squareRoot = 0;
+        while (squareRoot < (int) Math.sqrt(N)){
+            squareRoot += 1;
+        }
+
+        if (squareRoot == 1){
+            return N;
+        }
+
+        return Math.min(perfectSquaresHelper(N - squareRoot * squareRoot,
+                squareRoot), perfectSquaresHelper(N, squareRoot - 1)) + 1;
+    }
+
+    public static int perfectSquaresHelper(int N, int squareRoot) {
+        if (N == 0) {
+            return 0;
+        }
+
+        if (squareRoot == 1) {
+            return N - 1;
+        }
+
+        if (N - squareRoot * squareRoot >= 0 && squareRoot != 1) {
+            return Math.min(perfectSquaresHelper(N - squareRoot * squareRoot,
+                    squareRoot), perfectSquaresHelper(N, squareRoot - 1)) + 1;
+        } else {
+            return perfectSquaresHelper(N, squareRoot - 1) + 1;
+        }
+    }
+
     public static int betterPerfectSquaresTab(int n){
         int min;
         int[] perfectSquares = new int[n + 1];
