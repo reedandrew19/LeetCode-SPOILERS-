@@ -110,10 +110,11 @@ public class PerfectSquares {
  * possible to use streams to make tabulation functional..." I will be
  * exploring this possibility in the days to come.
  *
- * Post Submission: submission accepted! woo!! But alas. After telling my recruiter I found the fastest answer after he
- * asked what I thought about the interview.... what a blunder that was. The more I do these practice problems the more
- * I'm coming to realize these problems usually have a constant time sollution.... CURSE YOU LARANGE'S FOUR SQUARE
- * THEOREM!!!
+ * Post Submission: submission accepted! woo!! But alas. After telling my
+ * recruiter I found the fastest answer after he asked what I thought about the
+ * interview.... what a blunder that was. The more I do these practice problems
+ * the more I'm coming to realize these problems usually have a constant time
+ * solution.... CURSE YOU LARANGE'S FOUR SQUARE THEOREM!!!
  *
  * ...Nah but it's a cool theorem.
  */
