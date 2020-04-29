@@ -15,7 +15,7 @@ public class AddTwoNumbersTest {
         ListNode list1 = new ListNode(2);
         ListNode list2 = new ListNode(6);
 
-        assertEquals("(8)", AddTwoNumbers.addTwoNumbers(list1,
+        assertEquals("(8)", AddTwoNumbers.addTwoNumbersCleaner(list1,
                 list2).getListString());
     }
 
@@ -27,7 +27,7 @@ public class AddTwoNumbersTest {
         ListNode list2 = new ListNode(4);
         list2.next = new ListNode(2);
 
-        assertEquals("(8,9)", AddTwoNumbers.addTwoNumbers(list1, list2)
+        assertEquals("(8,9)", AddTwoNumbers.addTwoNumbersCleaner(list1, list2)
                 .getListString());
     }
 
@@ -38,9 +38,9 @@ public class AddTwoNumbersTest {
 
         ListNode list2 = new ListNode(3);
 
-        assertEquals("(4,9)", AddTwoNumbers.addTwoNumbers(list1, list2)
+        assertEquals("(4,9)", AddTwoNumbers.addTwoNumbersCleaner(list1, list2)
                 .getListString());
-        assertEquals("(4,9)", AddTwoNumbers.addTwoNumbers(list2, list1)
+        assertEquals("(4,9)", AddTwoNumbers.addTwoNumbersCleaner(list2, list1)
                 .getListString());
     }
 
@@ -49,7 +49,7 @@ public class AddTwoNumbersTest {
         ListNode list1 = new ListNode(9);
         ListNode list2 = new ListNode(9);
 
-        assertEquals("(8,1)", AddTwoNumbers.addTwoNumbers(list1, list2)
+        assertEquals("(8,1)", AddTwoNumbers.addTwoNumbersCleaner(list1, list2)
                 .getListString());
     }
 
@@ -61,7 +61,7 @@ public class AddTwoNumbersTest {
         ListNode list2 = new ListNode(7);
         list2.next = new ListNode(3);
 
-        assertEquals("(5,8)", AddTwoNumbers.addTwoNumbers(list1, list2)
+        assertEquals("(5,8)", AddTwoNumbers.addTwoNumbersCleaner(list1, list2)
                 .getListString());
     }
 
@@ -72,9 +72,9 @@ public class AddTwoNumbersTest {
 
         ListNode list2 = new ListNode(7);
 
-        assertEquals("(5,5)", AddTwoNumbers.addTwoNumbers(list1, list2)
+        assertEquals("(5,5)", AddTwoNumbers.addTwoNumbersCleaner(list1, list2)
                 .getListString());
-        assertEquals("(5,5)", AddTwoNumbers.addTwoNumbers(list2, list1)
+        assertEquals("(5,5)", AddTwoNumbers.addTwoNumbersCleaner(list2, list1)
                 .getListString());
     }
 
@@ -85,7 +85,7 @@ public class AddTwoNumbersTest {
 
         ListNode list2 = new ListNode(1);
 
-        assertEquals("(0,0,1)", AddTwoNumbers.addTwoNumbers(list1, list2)
+        assertEquals("(0,0,1)", AddTwoNumbers.addTwoNumbersCleaner(list1, list2)
                 .getListString());
     }
 }

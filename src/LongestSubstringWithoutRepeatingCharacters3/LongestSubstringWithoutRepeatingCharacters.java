@@ -1,34 +1,27 @@
 package LongestSubstringWithoutRepeatingCharacters3;
 
 import java.util.HashMap;
+import java.util.HashSet;
 
 /**
  * Created by Andrew on 5/27/2018.
  */
 public class LongestSubstringWithoutRepeatingCharacters {
-    public static int LongestSubstringWithoutRepeatingCharacters(String s){
-        int[] longestSubstring = new int[s.length()];
-        int endOfPrevSubstring = -1;
-        HashMap<Character, Integer> charToIndex = new HashMap<>();
+    public static int lengthOfLongestSubstring(String s){
+        int longestStringLength = 0;
+        int currentWordStartingIndex = 0;
+        HashMap<Character, Integer> lettersOfIndex = new HashMap<>();
 
-        if(s.length() == 0){
-            return 0;
-        }
-
-        longestSubstring[0] = 1;
-        charToIndex.put(s.charAt(0), 0);
-
-        for(int i = 1; i < s.length(); i++){
-            if(charToIndex.containsKey(s.charAt(i))){
-                endOfPrevSubstring = Math.max(endOfPrevSubstring,
-                        charToIndex.get(s.charAt(i)));
+        for(int i = 0; i < s.length(); i++) {
+            char letter = s.charAt(i);
+            if(lettersOfIndex.containsKey(letter) && currentWordStartingIndex <= lettersOfIndex.get(letter)) {
+                currentWordStartingIndex = lettersOfIndex.get(letter) + 1;
             }
 
-            longestSubstring[i] = Math.max(i - endOfPrevSubstring,
-                    longestSubstring[i - 1]);
-            charToIndex.put(s.charAt(i), i);
+            lettersOfIndex.put(letter, i);
+            longestStringLength = Math.max(longestStringLength, i - currentWordStartingIndex + 1);
         }
 
-        return longestSubstring[s.length() - 1];
+        return longestStringLength;
     }
 }

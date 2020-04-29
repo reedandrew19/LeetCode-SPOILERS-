@@ -65,4 +65,29 @@ public class AddTwoNumbers {
 
         return returnList;
     }
+
+    public static ListNode addTwoNumbersCleaner(ListNode l1, ListNode l2) {
+        ListNode returnList = new ListNode(0);
+        ListNode cursor = returnList;
+        int carry = 0;
+
+        while(l1 != null || l2 != null) {
+            int list1Val = (l1 != null) ? l1.val : 0;
+            int list2Val = (l2 != null) ? l2.val : 0;
+            int sum = list1Val + list2Val + carry;
+
+            carry = sum / 10;
+            cursor.next = new ListNode(sum % 10);
+            cursor = cursor.next;
+
+            if(l1 != null) l1 = l1.next;
+            if(l2 != null) l2 = l2.next;
+        }
+
+        if(carry > 0) {
+            cursor.next = new ListNode(carry);
+        }
+
+        return returnList.next;
+    }
 }

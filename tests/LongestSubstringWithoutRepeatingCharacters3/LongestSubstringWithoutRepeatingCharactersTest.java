@@ -11,42 +11,42 @@ public class LongestSubstringWithoutRepeatingCharactersTest {
     @Test
     public void TestNoRepeats(){
         assertEquals(1, LongestSubstringWithoutRepeatingCharacters
-                .LongestSubstringWithoutRepeatingCharacters("a"));
+                .lengthOfLongestSubstring("a"));
         assertEquals(7, LongestSubstringWithoutRepeatingCharacters
-                .LongestSubstringWithoutRepeatingCharacters("bacdpql"));
+                .lengthOfLongestSubstring("bacdpql"));
     }
 
     @Test
     public void TestEmptyString(){
         assertEquals(0, LongestSubstringWithoutRepeatingCharacters
-        .LongestSubstringWithoutRepeatingCharacters(""));
+        .lengthOfLongestSubstring(""));
     }
 
     @Test
     public void AllSameLetter(){
         assertEquals(1, LongestSubstringWithoutRepeatingCharacters
-        .LongestSubstringWithoutRepeatingCharacters("bbbbbbb"));
+        .lengthOfLongestSubstring("bbbbbbb"));
     }
 
     @Test
     public void TestRepeatsNoOverlapping(){
         assertEquals(3, LongestSubstringWithoutRepeatingCharacters
-        .LongestSubstringWithoutRepeatingCharacters("abcabcabc"));
+        .lengthOfLongestSubstring("abcabcabc"));
     }
 
     @Test
     public void TestRepeatsOverLapping(){
         assertEquals(3, LongestSubstringWithoutRepeatingCharacters
-        .LongestSubstringWithoutRepeatingCharacters("abcabcbb"));
+        .lengthOfLongestSubstring("abcabcbb"));
         assertEquals(3, LongestSubstringWithoutRepeatingCharacters
-        .LongestSubstringWithoutRepeatingCharacters("pwwkew"));
+        .lengthOfLongestSubstring("pwwkew"));
     }
 
     @Test
     public void TestIdunno(){
         assertEquals(3, LongestSubstringWithoutRepeatingCharacters
-        .LongestSubstringWithoutRepeatingCharacters("dvdf"));
+        .lengthOfLongestSubstring("dvdf"));
         assertEquals(2, LongestSubstringWithoutRepeatingCharacters
-                .LongestSubstringWithoutRepeatingCharacters("abba"));
+                .lengthOfLongestSubstring("abba"));
     }
 }
