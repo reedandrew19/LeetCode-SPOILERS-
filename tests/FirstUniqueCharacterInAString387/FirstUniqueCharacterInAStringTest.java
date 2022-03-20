@@ -34,4 +34,34 @@ public class FirstUniqueCharacterInAStringTest {
     public void testNoUniqueLetter(){
         assertEquals(-1, FirstUniqueCharacterInAString.firstUniqChar("asdrfjklasdrfjkl"));
     }
+
+    @Test
+    public void testEmptyStringArray(){
+        assertEquals(-1, FirstUniqueCharacterInAString.firstUniqCharArray(""));
+    }
+
+    @Test
+    public void testOnlyOneLetterArray(){
+        assertEquals(0, FirstUniqueCharacterInAString.firstUniqCharArray("s"));
+    }
+
+    @Test
+    public void testFirstLetterOnlyUniqueArray(){
+        assertEquals(0, FirstUniqueCharacterInAString.firstUniqCharArray("akkll"));
+    }
+
+    @Test
+    public void testFirstLetterNotOnlyUniqueArray(){
+        assertEquals(0, FirstUniqueCharacterInAString.firstUniqCharArray("akkllg"));
+    }
+
+    @Test
+    public void testUniqueLetterInMiddleArray(){
+        assertEquals(3, FirstUniqueCharacterInAString.firstUniqCharArray("ddfkfuud"));
+    }
+
+    @Test
+    public void testNoUniqueLetterArray(){
+        assertEquals(-1, FirstUniqueCharacterInAString.firstUniqCharArray("asdrfjklasdrfjkl"));
+    }
 }
