@@ -1,9 +1,7 @@
 package MissingNumber268;
 
-import org.junit.Test;
-
-import static org.junit.Assert.*;
-
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 public class MissingNumberTest {
     @Test
     public void assertArrayOneElement(){

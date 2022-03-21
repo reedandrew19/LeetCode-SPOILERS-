@@ -1,9 +1,7 @@
 package HammingDistance461;
 
-import org.junit.Test;
-
-import static org.junit.Assert.*;
-
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 /**
  * Created by Andrew on 6/14/2018.
  */

@@ -1,9 +1,7 @@
 package PerfectSquares279;
 
-import org.junit.Test;
-
-import static org.junit.Assert.*;
-
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 /**
  * Created by Andrew on 5/16/2018.
  */

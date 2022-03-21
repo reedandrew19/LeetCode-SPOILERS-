@@ -1,9 +1,7 @@
 package UniqueMorseCodeWords804;
 
-import org.junit.Test;
-
-import static org.junit.Assert.*;
-
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 /**
  * International Morse Code defines a standard encoding where each letter is
  * mapped to a series of dots and dashes, as follows: "a" maps to ".-", "b"

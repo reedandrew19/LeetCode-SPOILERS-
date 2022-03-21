@@ -1,11 +1,9 @@
 package TwoSum1;
 
-import org.junit.Test;
-
+import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 
-import static org.junit.Assert.*;
-
+import static org.junit.jupiter.api.Assertions.*;
 /**
  * Created by Andrew on 5/22/2018.
  */
